@@ -5,11 +5,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typescript gyakorló</title>
+    <title>Typescript gyakorló/Programozási tételek</title>
 </head>
 
 <body>
 
 </body>
+<script src="univerzalisTombGenerator.js"></script>
+<script src="osszegzesTetele.js"></script>
+<script src="atlagSzamitasTetele.js"></script>
+<script src="megszamlalasTetele.js"></script>
+<script src="kivalogatasTetele.js"></script>
+<script src="minimumKivalasztasTetele.js"></script>
+<script src="maximumKivalasztasTetele.js"></script>
+<script>
+    let generaltTomb = univerzalisTombGenerator(10, 1, 50);
+    document.write("A generált tömb elemei:" + generaltTomb + "<br>");
+    document.write("A vizsgált tömb összege:" + osszegzesTetele(generaltTomb) + "<br>");
+    document.write("A vizsgált tömb átlaga:" + atlagSzamitasTetele(generaltTomb) + "<br>");
+    document.write("A vizsgált tömb páros számainak mennyisége:" + megszamlalasTetele(generaltTomb) + "<br>");
+    document.write("A vizsgált tömb páros számainak elemei:" + kivalogatasTetele(generaltTomb) + "<br>");
+    document.write("A vizsgált tömb minimum értéke:" + minimumKivTetele(generaltTomb) + "<br>");
+    document.write("A vizsgált tömb maximum értéke:" + maxKivTetele(generaltTomb) + "<br>");
+</script>
 
 </html>
