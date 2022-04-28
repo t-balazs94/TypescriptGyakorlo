@@ -10,6 +10,7 @@
 
 <body>
 
+
 </body>
 <script src="univerzalisTombGenerator.js"></script>
 <script src="osszegzesTetele.js"></script>
@@ -18,7 +19,12 @@
 <script src="kivalogatasTetele.js"></script>
 <script src="minimumKivalasztasTetele.js"></script>
 <script src="maximumKivalasztasTetele.js"></script>
+<script src="unio.js"></script>
+<script src="metszet.js"></script>
+
 <script>
+    let elsoTomb = [2, 12, 24, 36, 99, 45, 54];
+    let masodikTomb = [3, 24, 36, 74, 84, 33, 61];
     let generaltTomb = univerzalisTombGenerator(10, 1, 50);
     document.write("A generált tömb elemei:" + generaltTomb + "<br>");
     document.write("A vizsgált tömb összege:" + osszegzesTetele(generaltTomb) + "<br>");
@@ -27,6 +33,10 @@
     document.write("A vizsgált tömb páros számainak elemei:" + kivalogatasTetele(generaltTomb) + "<br>");
     document.write("A vizsgált tömb minimum értéke:" + minimumKivTetele(generaltTomb) + "<br>");
     document.write("A vizsgált tömb maximum értéke:" + maxKivTetele(generaltTomb) + "<br>");
+    let unioTomb = unioMuvelet(elsoTomb, masodikTomb);
+    document.write("A vizsgált tömbök unio értékei:" + unioTomb + "<br>");
+    let metszetTomb = metszetMuvelet(elsoTomb, masodikTomb);
+    document.write("A vizsgált tömbök metszet értékei:" + metszetTomb + "<br>");
 </script>
 
 </html>
